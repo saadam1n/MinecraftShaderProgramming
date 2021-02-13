@@ -2,7 +2,8 @@
 *
 # Add the files relating to the tutorial
 !.gitignore
-!Tutorial*
 !Introduction
 !README.md
 !LICENSE
+# Is there an easier way to do this?
+!Tutorial 1 - Final Shader Program
