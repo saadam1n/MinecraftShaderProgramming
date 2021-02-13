@@ -1,10 +1,7 @@
 # Ignore all other shaderpacks
-*
+#*
 # Add the files relating to the tutorial
 !.gitignore
 !Introduction
 !README.md
 !LICENSE
-# Is there an easier way to do this?
-!*.vsh
-!*.fsh
