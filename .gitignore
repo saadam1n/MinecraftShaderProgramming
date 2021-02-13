@@ -3,3 +3,6 @@
 # Add the files relating to the tutorial
 !.gitignore
 !Tutorial*
+!Introduction
+!README.md
+!LICENSE
