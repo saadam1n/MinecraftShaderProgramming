@@ -1,3 +1,5 @@
+# Ignore all other shaderpacks
 *
-.gitignore
+# Add the files relating to the tutorial
+!.gitignore
 !Tutorial*
