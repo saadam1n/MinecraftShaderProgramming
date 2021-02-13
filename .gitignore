@@ -6,4 +6,5 @@
 !README.md
 !LICENSE
 # Is there an easier way to do this?
-!Tutorial 1 - Final Shader Program/*
+!*.vsh
+!*.fsh
