@@ -2,6 +2,10 @@
 
 This repository contains information and tutorials on how to write custom shaders for Minecraft use the Optifine mod. The tutorials start at the "Introduction" folder and then the "Tutorial N - ABCD" folders contain information on how to add a certain effect to your shader. The "Introduction" folder is not a shader pack, but the "Tutorial N - ABCD" is. For these tutorials the only requirement is a basic knowledge of graphics programming (you need to know everything up to the concept of rendering to a texture), although I plan to add another tutorial that explains all the basics in detail.
 
+I originally created this project because when I was learning how to write Minecraft shaders, there was little to no information I could find on how to write them. These set of tutorials aims to get rid of that issue for those who want to learn how to write a Minecraft shader.
+
+If you want to contribute your own tutorial, create a pull request. One of my end goals with this project is the turn this into a community effort.
+
 ## How to download
 
 First make sure you have Optifine installed and find your `shaderpacks` folder.

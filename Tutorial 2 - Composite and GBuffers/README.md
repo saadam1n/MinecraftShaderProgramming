@@ -224,4 +224,4 @@ void main(){
 
 ![Simple Diffuse Lighting](images/simple_diffuse.png)
 
-Notice how blocks facing away from the sun are lit less that those that are. Also notice how the sky looks completely broken. This is because `composite` is a fullscreen pass and that doesn't mean it does not run for the sky as well. We will fix this bug in a later tutorial. In the next tutorial we will look at using the lightmap to account for both torch and sky lighting.
+Notice how blocks facing away from the sun are lit less that those that are. Also notice how the sky looks completely broken. This is because `composite` is a fullscreen pass and that doesn't mean it does not run for the sky as well. We will fix this bug in a later tutorial. In the next tutorial we will look at using the lightmap to account for both torch and sky lighting, and we will add shadows to our shaders.
