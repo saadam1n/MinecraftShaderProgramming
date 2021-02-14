@@ -5,7 +5,7 @@ varying vec2 TexCoords;
 uniform sampler2D colortex0;
 
 void main() {
-   vec3 Color = texture2D(colortex0, TexCoords).rgb;
-   Color = vec3(dot(Color, vec3(0.333f)));
+    // Sample and apply gamma correction
+   vec3 Color = pow(texture2D(colortex0, TexCoords).rgb, vec3(1.0f / 2.2f));
    gl_FragColor = vec4(Color, 1.0f);
 }

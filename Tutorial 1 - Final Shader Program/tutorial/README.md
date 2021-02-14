@@ -60,10 +60,10 @@ After the vertex shader comes the fragment shader. We start off by declaring the
 varying vec2 TexCoords;
 ```
 
-Since final is a fullscreen pass, we need to sample the screen's color from somewhere. Since we have not defined any other program besides final, Optifine will use it's internal shader for the missing programs. The internal shader is basically a reimplementation of the vanilla shaders in the shader pipeline. The internal shaders outputs it's color to a texture called `gcolor`.
+Since final is a fullscreen pass, we need to sample the screen's color from somewhere. Since we have not defined any other program besides final, Optifine will use it's internal shader for the missing programs. The internal shader is basically a reimplementation of the vanilla shaders in the shader pipeline. The internal shaders outputs it's color to a texture called `colortex0`.
 
 ```glsl
-uniform sampler2D gcolor;
+uniform sampler2D colortex0;
 ```
 
 Now we enter the `main` function:
@@ -71,7 +71,7 @@ Now we enter the `main` function:
 ```glsl
 void main() {
     // Sample the color
-   vec3 Color = texture2D(gcolor, TexCoords).rgb;
+   vec3 Color = texture2D(colortex0, TexCoords).rgb;
    // Convert to grayscale
    Color = vec3(dot(Color, vec3(0.333f)));
    // Output the color
@@ -79,7 +79,7 @@ void main() {
 }
 ```
 
-Let's break it down line by line. We first sample `gcolor` using our texture coordinate. We use the function `texture2D` here since that is how you sampled from a 2D texture in old versions of GLSL. More modern versions have replaced this function with `texture`, however, that is not available in GLSL 120. We then convert the color to grayscale using `dot(Color, vec3(0.333f))` which is mathematically equivalent to `Color.r * 0.333f + Color.g * 0.333f + Color.b * 0.333f`. Then we finally output the color to `gl_FragColor`.
+Let's break it down line by line. We first sample `colortex0` using our texture coordinate. We use the function `texture2D` here since that is how you sampled from a 2D texture in old versions of GLSL. More modern versions have replaced this function with `texture`, however, that is not available in GLSL 120. We then convert the color to grayscale using `dot(Color, vec3(0.333f))` which is mathematically equivalent to `Color.r * 0.333f + Color.g * 0.333f + Color.b * 0.333f`. Then we finally output the color to `gl_FragColor`.
 
 In the end, your fragment shader should be this:
 
