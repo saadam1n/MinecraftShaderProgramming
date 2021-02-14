@@ -1,7 +1,0 @@
-# Ignore all other shaderpacks
-#*
-# Add the files relating to the tutorial
-!.gitignore
-!Introduction
-!README.md
-!LICENSE
