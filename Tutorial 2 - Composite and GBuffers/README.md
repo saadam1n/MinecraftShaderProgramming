@@ -4,7 +4,7 @@ Today we will explore the gbuffers and composite shader programs, and we will us
 
 ## What is gbuffers?
 
-The gbuffers programs are the main geometry passes. In gbuffers, you can render entities, particals, blocks, etc from the point of view of the player. There are different types of gbuffers programs. For example, `gbuffers_terrain` renders blocks like stone and dirt, while `gbuffers_entities` renders entities like mobs and chests. In gbuffers you can use them for forward rendering or use them as the gbuffers stage in a deferred rendering pipeline. 
+The gbuffers programs are the main geometry passes. In gbuffers, you can render entities, particals, blocks, etc from the point of view of the player. There are different types of gbuffers programs. For example, `gbuffers_terrain` renders blocks like stone and dirt, while `gbuffers_entities` renders entities like mobs and chests. In gbuffers you can use them for forward rendering or use them as the gbuffers stage in a deferred rendering pipeline.
 
 ## What is compsite?
 
@@ -73,7 +73,7 @@ uniform sampler2D colortex6; // color texture 6
 uniform sampler2D colortex7; // color texture 7
 ```
 
-I will not be using the legacy names in my tutorials. 
+I will not be using the legacy names in my tutorials.
 
 ## Show me the code
 
@@ -94,7 +94,7 @@ void main() {
 
 We first declare 2 `varying` variables, which are our normal vector and our texture coordinates. In the `main` function, we transform our vertex, and assign values to our texture coordinates and normal vector. `gl_Normal` is an in-built `attribute` variable representing the world space normal vector. However, we have to transform our normal from world space to view space since most of our calculations are done in view space. We will see why that is later. We do the normal transformation using an in-built `uniform` variabled called the `gl_NormalMatrix`.
 
-Let's take a look at the fragment shader. 
+Let's take a look at the fragment shader.
 
 ```glsl
 #version 120
