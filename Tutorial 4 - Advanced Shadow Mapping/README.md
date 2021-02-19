@@ -4,11 +4,7 @@ In this tutorial I will make our shadows look actually good. I will be covering 
 
 ## Fixing the low detailed shadows problem
 
-Continuing from the last tutorial, our shadows still look blocky
-
-![Shadows](../Tutorial 3 - Advanced Lighting/images/no_shadow_acne.png)
-
-There is a fix to this. We can use a technique known as shadow distortion. In a nutshell, what shadow distortion does is distort the shadow clip space verticies in a way that verticies close to the center become bigger while ones far away become smaller. The advantage of this is that the space on the shadow map gets used more effectively. For those of you who know what cascaded shadow mapping is, think of shadow distortion being a super lazy alternative that only requires one shadow pass instead of N cascades number of passes.
+Continuing from the last tutorial, our shadows still look blocky. There is a fix to this. We can use a technique known as shadow distortion. In a nutshell, what shadow distortion does is distort the shadow clip space verticies in a way that verticies close to the center become bigger while ones far away become smaller. The advantage of this is that the space on the shadow map gets used more effectively. For those of you who know what cascaded shadow mapping is, think of shadow distortion being a super lazy alternative that only requires one shadow pass instead of N cascades number of passes.
 
 Let's look at the equations for shadow distortion. We first need to calculate distance of a vertex from the center of clip space, which is (0, 0). This can be done simply with the pythagorean theorem.
 
