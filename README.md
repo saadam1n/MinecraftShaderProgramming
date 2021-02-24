@@ -18,3 +18,9 @@ If you do not have `git` installed, download this repo and move it's files into 
 
 - The Continuum Minecraft shader tutorial, which helped me initially get started on shader programming.
 - The [shaderLabs Discord server](https://discord.gg/RpzWN9S) for helping me with my own shader programming.
+
+## Contact
+
+For questions and concerns regarding this tutorial, please contact me at:
+
+- Discrd: fuzdex#1811
