@@ -4,7 +4,9 @@ In this tutorial we explore the most basic fullscreen pass: The final pass.
 
 ## Basic file structure of a shader
 
-Within a shader pack, there is a folder called "shaders". This is where all the shader code goes. All shader files have the extension `.vsh` for vertex shaders or `.fsh` for fragment shaders. The shaders with the same file name will become part of the same program. For example, in this case, `final.vsh` and `final.fsh` get linked toghter to form the `final` program.
+Before we start learning about `final`, we need to understand the basic file structure of a shader pack. Within a shader pack, there is a folder called "shaders". This is where all the shader files goes. The files have the extension `.vsh` for vertex shaders or `.fsh` for fragment shaders. The shader file name corresponds to a shader program name. For example, `final.vsh` and `final.fsh` are part of the `final` shader program.
+
+To create your own shader, first create a folder. The name of the folder is the name you want to give your shader. Then inside that folder, create another folder called "shaders". Within `shaders`, you can start creating the shader files. If you are confused about file structure of a shader pack, you can always look at another shader pack for reference.
 
 ## What is final?
 
@@ -22,7 +24,7 @@ We will be implementing a basic shader that converts the colors on your screen t
 #version 120
 ```
 
-Since final is a fullscreen pass, we need to pass a texture coordinate into the fragment shader.
+Since `final` is a fullscreen pass, we need to pass a texture coordinate into the fragment shader so we can read from the pixels from the screen.
 
 ```glsl
 varying vec2 TexCoords;
@@ -88,11 +90,14 @@ In the end, your fragment shader should be this:
 
 varying vec2 TexCoords;
 
-uniform sampler2D gcolor;
+uniform sampler2D colortex0;
 
 void main() {
-   vec3 Color = texture2D(gcolor, TexCoords).rgb;
+   // Sample the color
+   vec3 Color = texture2D(colortex0, TexCoords).rgb;
+   // Convert to grayscale
    Color = vec3(dot(Color, vec3(0.333f)));
+   // Output the color
    gl_FragColor = vec4(Color, 1.0f);
 }
 ```
@@ -101,4 +106,4 @@ Here is the results of the shader:
 
 ![Image of the Grayscale Shader](images/demo.png)
 
-Although it is not much, it's definitely a start on your shader programming journey!
+Although it is not much, it's definitely a start on your shader programming journey! In the next tutorial, we will do some block rendering and learn about `composite`, which is the other fullscreen pass I mentioned.
