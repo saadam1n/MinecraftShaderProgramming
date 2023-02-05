@@ -1,3 +1,9 @@
+# UPDATE 2/5/2023
+
+After two years of literally no updates to this tutorial, I have finally picked up the skills of web development and now you can find this tutorial on my website at [my website](https://saada2006.github.io/blogs/mc_shaders_part0). However, the code for each shader will remain on this repository. 
+
+I probably won't have time to seriously update and maintain this tutorial until the beginning of 2024. 
+
 # Minecraft Shader Programming
 
 This repository contains information and tutorials on how to write custom shaders for Minecraft using the Optifine mod. The tutorials start at the "Tutorial 0 - Introduction" folder and then the "Tutorial N - ABCD" folders contain information on how to add a certain effect to your shader. The "Tutorial 0 - Introduction" folder is not a shader pack, but the other tutorial folders are. For these tutorials the only requirement is a basic knowledge of graphics programming (you need to know everything up to the concept of rendering to a texture), although I plan to add another tutorial that explains all the basics in detail.
