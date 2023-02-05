@@ -1,6 +1,6 @@
 # UPDATE 2/5/2023
 
-After two years of literally no updates to this tutorial, I have finally picked up the skills of web development and now you can find this tutorial on my website at [my website](https://saada2006.github.io/blogs/mc_shaders_part0). However, the code for each shader will remain on this repository. 
+After two years of literally no updates to this tutorial, I have finally picked up the skills of web development and now you can find this tutorial on [my website](https://saada2006.github.io/blogs/mc_shaders_part0). However, the code for each shader will remain on this repository. 
 
 I probably won't have time to seriously update and maintain this tutorial until the beginning of 2024. 
 
