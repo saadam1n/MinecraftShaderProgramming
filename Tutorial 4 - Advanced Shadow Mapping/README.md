@@ -83,7 +83,7 @@ void main(){
     gl_Position.xy = DistortPosition(gl_Position.xy);
     TexCoords = gl_MultiTexCoord0.st;
     Color = gl_Color;
-} Color = gl_Color;
+}
 ```
 
 And in `shadow.fsh`:
